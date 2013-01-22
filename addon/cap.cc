@@ -4,7 +4,7 @@
 #include <string>
 #include <iostream>
 
-#define Dcimg_use_jpeg
+
 #include "cap.h"
 #include "CImg-1.5.3/CImg.h"
 

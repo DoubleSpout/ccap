@@ -7,7 +7,7 @@ node-ccap support linux and windows.
 
 compile maybe cost you 1 minute,simply wait;
 
-if you install jpeg lib,you can rebuild it using binding.gyp.jpeg file, support jpeg export.default is bmp!
+linux support jpeg,windows only support bmp!
 
 ##performance
 

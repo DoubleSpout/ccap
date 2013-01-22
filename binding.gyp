@@ -3,12 +3,19 @@
     {
       "target_name": "hcaptha",
       "sources": [ "addon/hcaptha.cc" ,"addon/cap.cc"],
-      "cflags": ["-fexceptions","-Dcimg_display=0"],
-      "cflags_cc": ["-fexceptions","-Dcimg_display=0"],
       "conditions": [
-            ["OS==\"mac\"", {"libraries": []}],
-            ["OS==\"linux\"", {"libraries": []}],
-            ["OS==\"win\"", {"libraries": []}]
+            ["OS==\"mac\"", {"libraries": ["-ljpeg"],
+                               "cflags": ["-fexceptions","-Dcimg_display=0","-Dcimg_use_jpeg"],
+                               "cflags_cc": ["-fexceptions","-Dcimg_display=0","-Dcimg_use_jpeg"],
+            }],
+            ["OS==\"linux\"", {"libraries": ["-ljpeg"],
+                               "cflags": ["-fexceptions","-Dcimg_display=0","-Dcimg_use_jpeg"],
+                               "cflags_cc": ["-fexceptions","-Dcimg_display=0","-Dcimg_use_jpeg"]
+            }],
+            ["OS==\"win\"", {"libraries": [],
+                               "cflags": ["-fexceptions","-Dcimg_display=0"],
+                               "cflags_cc": ["-fexceptions","-Dcimg_display=0"]
+            }]
         ]
     }
   ]
