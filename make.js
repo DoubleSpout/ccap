@@ -100,7 +100,7 @@ var makei = function(){
 
 
 var echo = function(){
-		fs.appendFile('/etc/ld.so.conf', '/usr/local/lib', 'utf-8', function (err) {
+		fs.appendFile('/etc/ld.so.conf', '\n/usr/local/lib', 'utf-8', function (err) {
 				  if (err){
 					  console.log('stderr: echo so lib error: '+data);
 					  process.exit();
