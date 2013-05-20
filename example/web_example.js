@@ -6,7 +6,6 @@ var ccap = require('../')();
 
 http.createServer(function (request, response) {
 
-
   if(request.url == '/favicon.ico')return response.end('');//request favicon.ico
 
   var ary = ccap.get();
@@ -16,6 +15,7 @@ http.createServer(function (request, response) {
   response.end(buf);
   console.log(txt);
 
+	response.end('11')
   
 }).listen(8124);
 
