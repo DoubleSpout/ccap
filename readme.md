@@ -1,5 +1,5 @@
 
-# node-ccap —— node.js generate captcha using c++ library CImg.
+# node-ccap —— node.js generate captcha using c++ library CImg. [![Build Status](https://travis-ci.org/DoubleSpout/ccap.png?branch=master)](https://travis-ci.org/DoubleSpout/ccap)
 
 You can generate captcha without install any other libraries or software, only do npm install ccap, that's all.
 
