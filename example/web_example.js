@@ -14,8 +14,6 @@ http.createServer(function (request, response) {
 
   response.end(buf);
   console.log(txt);
-
-	response.end('11')
   
 }).listen(8124);
 
