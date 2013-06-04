@@ -6,7 +6,7 @@
 
 
 #include "cap.h"
-#include "CImg-1.5.3/CImg.h"
+#include "jpeglib/CImg.h"
 
   
 using namespace v8;

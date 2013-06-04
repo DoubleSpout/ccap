@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{273E9609-7ECA-DDF6-C641-8EA073D6EB09}</ProjectGuid>
+    <ProjectGuid>{CDB6C05A-A550-0B65-6E91-232CB0CBB350}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>hcaptha</RootNamespace>
   </PropertyGroup>

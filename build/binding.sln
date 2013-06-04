@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "hcaptha", "hcaptha.vcxproj", "{273E9609-7ECA-DDF6-C641-8EA073D6EB09}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "hcaptha", "hcaptha.vcxproj", "{CDB6C05A-A550-0B65-6E91-232CB0CBB350}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -8,10 +8,10 @@ Global
 		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{273E9609-7ECA-DDF6-C641-8EA073D6EB09}.Debug|x64.ActiveCfg = Debug|x64
-		{273E9609-7ECA-DDF6-C641-8EA073D6EB09}.Debug|x64.Build.0 = Debug|x64
-		{273E9609-7ECA-DDF6-C641-8EA073D6EB09}.Release|x64.ActiveCfg = Release|x64
-		{273E9609-7ECA-DDF6-C641-8EA073D6EB09}.Release|x64.Build.0 = Release|x64
+		{CDB6C05A-A550-0B65-6E91-232CB0CBB350}.Debug|x64.ActiveCfg = Debug|x64
+		{CDB6C05A-A550-0B65-6E91-232CB0CBB350}.Debug|x64.Build.0 = Debug|x64
+		{CDB6C05A-A550-0B65-6E91-232CB0CBB350}.Release|x64.ActiveCfg = Release|x64
+		{CDB6C05A-A550-0B65-6E91-232CB0CBB350}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
