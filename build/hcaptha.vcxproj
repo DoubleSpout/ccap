@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{CDB6C05A-A550-0B65-6E91-232CB0CBB350}</ProjectGuid>
+    <ProjectGuid>{273E9609-7ECA-DDF6-C641-8EA073D6EB09}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>hcaptha</RootNamespace>
   </PropertyGroup>
@@ -38,7 +38,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\snoopyxdy\.node-gyp\0.10.6\src;C:\Users\snoopyxdy\.node-gyp\0.10.6\deps\uv\include;C:\Users\snoopyxdy\.node-gyp\0.10.6\deps\v8\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\wuzh\.node-gyp\0.10.15\src;C:\Users\wuzh\.node-gyp\0.10.15\deps\uv\include;C:\Users\wuzh\.node-gyp\0.10.15\deps\v8\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <BufferSecurityCheck>true</BufferSecurityCheck>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -55,7 +55,7 @@
       <WarningLevel>Level3</WarningLevel>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>C:\Users\snoopyxdy\.node-gyp\0.10.6\$(Configuration)\node.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>C:\Users\wuzh\.node-gyp\0.10.15\$(Configuration)\node.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AllowIsolation>true</AllowIsolation>
       <DataExecutionPrevention>true</DataExecutionPrevention>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -65,13 +65,13 @@
       <TargetMachine>MachineX64</TargetMachine>
     </Link>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>C:\Users\snoopyxdy\.node-gyp\0.10.6\src;C:\Users\snoopyxdy\.node-gyp\0.10.6\deps\uv\include;C:\Users\snoopyxdy\.node-gyp\0.10.6\deps\v8\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\wuzh\.node-gyp\0.10.15\src;C:\Users\wuzh\.node-gyp\0.10.15\deps\uv\include;C:\Users\wuzh\.node-gyp\0.10.15\deps\v8\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;BUILDING_V8_SHARED=1;BUILDING_UV_SHARED=1;BUILDING_NODE_EXTENSION;DEBUG;_DEBUG;%(PreprocessorDefinitions);%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\snoopyxdy\.node-gyp\0.10.6\src;C:\Users\snoopyxdy\.node-gyp\0.10.6\deps\uv\include;C:\Users\snoopyxdy\.node-gyp\0.10.6\deps\v8\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\wuzh\.node-gyp\0.10.15\src;C:\Users\wuzh\.node-gyp\0.10.15\deps\uv\include;C:\Users\wuzh\.node-gyp\0.10.15\deps\v8\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
       <BufferSecurityCheck>true</BufferSecurityCheck>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -96,7 +96,7 @@
       <AdditionalOptions>/LTCG %(AdditionalOptions)</AdditionalOptions>
     </Lib>
     <Link>
-      <AdditionalDependencies>C:\Users\snoopyxdy\.node-gyp\0.10.6\$(Configuration)\node.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>C:\Users\wuzh\.node-gyp\0.10.15\$(Configuration)\node.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AllowIsolation>true</AllowIsolation>
       <DataExecutionPrevention>true</DataExecutionPrevention>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -109,7 +109,7 @@
       <TargetMachine>MachineX64</TargetMachine>
     </Link>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>C:\Users\snoopyxdy\.node-gyp\0.10.6\src;C:\Users\snoopyxdy\.node-gyp\0.10.6\deps\uv\include;C:\Users\snoopyxdy\.node-gyp\0.10.6\deps\v8\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\wuzh\.node-gyp\0.10.15\src;C:\Users\wuzh\.node-gyp\0.10.15\deps\uv\include;C:\Users\wuzh\.node-gyp\0.10.15\deps\v8\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;BUILDING_V8_SHARED=1;BUILDING_UV_SHARED=1;BUILDING_NODE_EXTENSION;%(PreprocessorDefinitions);%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ResourceCompile>
   </ItemDefinitionGroup>

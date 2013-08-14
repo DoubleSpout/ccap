@@ -25,13 +25,13 @@
     "node_use_openssl": "true",
     "node_use_perfctr": "true",
     "node_use_systemtap": "false",
-    "python": "C:\\Python27\\python.exe",
+    "python": "c:\\python27\\python.exe",
     "target_arch": "x64",
     "v8_enable_gdbjit": 0,
     "v8_no_strict_aliasing": 1,
-    "v8_use_snapshot": "false",
+    "v8_use_snapshot": "true",
     "visibility": "",
-    "nodedir": "C:\\Users\\snoopyxdy\\.node-gyp\\0.10.6",
+    "nodedir": "C:\\Users\\wuzh\\.node-gyp\\0.10.15",
     "copy_dev_lib": "true",
     "standalone_static_library": 1
   }

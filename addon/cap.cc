@@ -21,6 +21,7 @@ namespace img_obj{
 	int offset;
 	int quality;
 	int isjpeg;
+  int fontSize;
 }
 
 
@@ -48,6 +49,7 @@ Handle<Value> cap::create(const Arguments& args) {
   img_obj::offset = args[5]->Int32Value();
   img_obj::quality = args[6]->Int32Value();
   img_obj::isjpeg = args[7]->Int32Value();
+  img_obj::fontSize = args[8]->Int32Value();
 
   save();  
   
@@ -67,6 +69,7 @@ int cap::save(){
    int offset(img_obj::offset);
    int quality(img_obj::quality);
    int isjpeg(img_obj::isjpeg);
+   int fontSize(img_obj::fontSize);
 
   // Create captcha image
   //----------------------
@@ -82,7 +85,10 @@ int cap::save(){
       cimg_forX(color,i) color[i] = (unsigned char)(128+(std::rand()%127));
       tmp.draw_text((int)(2+8*cimg::rand()),
                     (int)(12*cimg::rand()),
-                    letter,color.data(),0,1,std::rand()%2?38:57).resize(-100,-100,1,3);
+                    letter,color.data(),
+                    0,
+                    1,
+                    fontSize).resize(-100,-100,1,3);
 //      const unsigned int dir = std::rand()%4, wph = tmp.width()+tmp.height();
 //      cimg_forXYC(tmp,x,y,v) {
 //        const int val = dir==0?x+y:(dir==1?x+tmp.height()-y:(dir==2?y+tmp.width()-x:tmp.width()-x+tmp.height()-y));

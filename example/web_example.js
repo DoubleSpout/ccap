@@ -1,7 +1,14 @@
 var http = require('http');
 
 //Instantiated ccap class
-var ccap = require('../')();
+
+var ccap = require('../')({
+	width:128,
+	height:40,
+	offset:20,
+	quality:100,
+  fontsize:30
+});
 
 
 http.createServer(function (request, response) {

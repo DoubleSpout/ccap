@@ -37,6 +37,8 @@ linux support jpeg,windows only support bmp!
 
 		quality:100,//set pic quality,default is 50
 
+		fontsize:57,//set font size,default is 57
+
 		generate:function(){//Custom the function to generate captcha text
 		
 		     //generate captcha text here
