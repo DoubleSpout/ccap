@@ -10,7 +10,6 @@ var ccap = require('../')({
   fontsize:30
 });
 
-
 http.createServer(function (request, response) {
 
   if(request.url == '/favicon.ico')return response.end('');//request favicon.ico
