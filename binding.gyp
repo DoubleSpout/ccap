@@ -4,7 +4,7 @@
       "target_name": "hcaptha",
       "conditions": [
             ["OS==\"mac\"", {   
-	                       "sources": ["addon/jpeglib/jaricom.c", "addon/jpeglib/jcapimin.c", "addon/jpeglib/jcapistd.c", 
+	               "sources": ["addon/jpeglib/jaricom.c", "addon/jpeglib/jcapimin.c", "addon/jpeglib/jcapistd.c", 
 			       "addon/jpeglib/jcarith.c","addon/jpeglib/jccoefct.c",
 			       "addon/jpeglib/jccolor.c","addon/jpeglib/jcdctmgr.c", 
 			       "addon/jpeglib/jchuff.c", "addon/jpeglib/jcinit.c", "addon/jpeglib/jcmainct.c",
