@@ -1,0 +1,1 @@
+cmd_Release/hcaptha.node := ./gyp-mac-tool flock ./Release/linker.lock c++ -shared -Wl,-search_paths_first -mmacosx-version-min=10.5 -arch x86_64 -L./Release -install_name @rpath/hcaptha.node -arch i386 -arch x86_64 -o Release/hcaptha.node Release/obj.target/hcaptha/addon/hcaptha.o Release/obj.target/hcaptha/addon/cap.o -undefined dynamic_lookup
