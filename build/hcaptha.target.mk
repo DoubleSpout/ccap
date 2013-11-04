@@ -81,6 +81,52 @@ INCS_Release := \
 	-I/Users/xudongichi/.node-gyp/0.10.18/deps/v8/include
 
 OBJS := \
+	$(obj).target/$(TARGET)/addon/jpeglib/jaricom.o \
+	$(obj).target/$(TARGET)/addon/jpeglib/jcapimin.o \
+	$(obj).target/$(TARGET)/addon/jpeglib/jcapistd.o \
+	$(obj).target/$(TARGET)/addon/jpeglib/jcarith.o \
+	$(obj).target/$(TARGET)/addon/jpeglib/jccoefct.o \
+	$(obj).target/$(TARGET)/addon/jpeglib/jccolor.o \
+	$(obj).target/$(TARGET)/addon/jpeglib/jcdctmgr.o \
+	$(obj).target/$(TARGET)/addon/jpeglib/jchuff.o \
+	$(obj).target/$(TARGET)/addon/jpeglib/jcinit.o \
+	$(obj).target/$(TARGET)/addon/jpeglib/jcmainct.o \
+	$(obj).target/$(TARGET)/addon/jpeglib/jcmarker.o \
+	$(obj).target/$(TARGET)/addon/jpeglib/jcmaster.o \
+	$(obj).target/$(TARGET)/addon/jpeglib/jcomapi.o \
+	$(obj).target/$(TARGET)/addon/jpeglib/jcparam.o \
+	$(obj).target/$(TARGET)/addon/jpeglib/jcprepct.o \
+	$(obj).target/$(TARGET)/addon/jpeglib/jcsample.o \
+	$(obj).target/$(TARGET)/addon/jpeglib/jctrans.o \
+	$(obj).target/$(TARGET)/addon/jpeglib/jdapimin.o \
+	$(obj).target/$(TARGET)/addon/jpeglib/jdapistd.o \
+	$(obj).target/$(TARGET)/addon/jpeglib/jdarith.o \
+	$(obj).target/$(TARGET)/addon/jpeglib/jdatadst.o \
+	$(obj).target/$(TARGET)/addon/jpeglib/jdatasrc.o \
+	$(obj).target/$(TARGET)/addon/jpeglib/jdcoefct.o \
+	$(obj).target/$(TARGET)/addon/jpeglib/jdcolor.o \
+	$(obj).target/$(TARGET)/addon/jpeglib/jddctmgr.o \
+	$(obj).target/$(TARGET)/addon/jpeglib/jdhuff.o \
+	$(obj).target/$(TARGET)/addon/jpeglib/jdinput.o \
+	$(obj).target/$(TARGET)/addon/jpeglib/jdmainct.o \
+	$(obj).target/$(TARGET)/addon/jpeglib/jdmarker.o \
+	$(obj).target/$(TARGET)/addon/jpeglib/jdmaster.o \
+	$(obj).target/$(TARGET)/addon/jpeglib/jdmerge.o \
+	$(obj).target/$(TARGET)/addon/jpeglib/jdpostct.o \
+	$(obj).target/$(TARGET)/addon/jpeglib/jdsample.o \
+	$(obj).target/$(TARGET)/addon/jpeglib/jdtrans.o \
+	$(obj).target/$(TARGET)/addon/jpeglib/jerror.o \
+	$(obj).target/$(TARGET)/addon/jpeglib/jfdctflt.o \
+	$(obj).target/$(TARGET)/addon/jpeglib/jfdctfst.o \
+	$(obj).target/$(TARGET)/addon/jpeglib/jfdctint.o \
+	$(obj).target/$(TARGET)/addon/jpeglib/jidctflt.o \
+	$(obj).target/$(TARGET)/addon/jpeglib/jidctfst.o \
+	$(obj).target/$(TARGET)/addon/jpeglib/jidctint.o \
+	$(obj).target/$(TARGET)/addon/jpeglib/jquant1.o \
+	$(obj).target/$(TARGET)/addon/jpeglib/jquant2.o \
+	$(obj).target/$(TARGET)/addon/jpeglib/jutils.o \
+	$(obj).target/$(TARGET)/addon/jpeglib/jmemmgr.o \
+	$(obj).target/$(TARGET)/addon/jpeglib/jmemnobs.o \
 	$(obj).target/$(TARGET)/addon/hcaptha.o \
 	$(obj).target/$(TARGET)/addon/cap.o
 
@@ -100,13 +146,22 @@ $(OBJS): GYP_OBJCXXFLAGS := $(DEFS_$(BUILDTYPE)) $(INCS_$(BUILDTYPE))  $(CFLAGS_
 $(obj).$(TOOLSET)/$(TARGET)/%.o: $(srcdir)/%.cc FORCE_DO_CMD
 	@$(call do_cmd,cxx,1)
 
+$(obj).$(TOOLSET)/$(TARGET)/%.o: $(srcdir)/%.c FORCE_DO_CMD
+	@$(call do_cmd,cc,1)
+
 # Try building from generated source, too.
 
 $(obj).$(TOOLSET)/$(TARGET)/%.o: $(obj).$(TOOLSET)/%.cc FORCE_DO_CMD
 	@$(call do_cmd,cxx,1)
 
+$(obj).$(TOOLSET)/$(TARGET)/%.o: $(obj).$(TOOLSET)/%.c FORCE_DO_CMD
+	@$(call do_cmd,cc,1)
+
 $(obj).$(TOOLSET)/$(TARGET)/%.o: $(obj)/%.cc FORCE_DO_CMD
 	@$(call do_cmd,cxx,1)
+
+$(obj).$(TOOLSET)/$(TARGET)/%.o: $(obj)/%.c FORCE_DO_CMD
+	@$(call do_cmd,cc,1)
 
 # End of this set of suffix rules
 ### Rules for final target.
