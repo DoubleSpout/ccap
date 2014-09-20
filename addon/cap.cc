@@ -1,6 +1,7 @@
 
 
 #include <node.h>
+#include <v8.h>
 #include <string>
 #include <iostream>
 
@@ -13,14 +14,14 @@ using namespace v8;
 using namespace cimg_library;
 
 namespace img_obj{
-	std::string text;
-	std::string filename;
-	int count;
-	int width;
-	int height;
-	int offset;
-	int quality;
-	int isjpeg;
+  std::string text;
+  std::string filename;
+  int count;
+  int width;
+  int height;
+  int offset;
+  int quality;
+  int isjpeg;
   int fontSize;
 }
 
@@ -35,8 +36,9 @@ args
 5-偏移
 return 文件的生成路径给node
 */
-Handle<Value> cap::create(const Arguments& args) {
-  HandleScope scope;
+void cap::create(const FunctionCallbackInfo<Value>& args) {
+  Isolate* isolate = Isolate::GetCurrent();
+  HandleScope scope(isolate);
 
   
   img_obj::text = toCString(args[0]->ToString());
@@ -53,7 +55,7 @@ Handle<Value> cap::create(const Arguments& args) {
 
   save();  
   
-  return scope.Close(String::New((img_obj::filename).c_str()));
+  args.GetReturnValue().Set(String::NewFromUtf8(isolate, (img_obj::filename).c_str()  ));
 }
 
 
@@ -132,7 +134,7 @@ int cap::save(){
     captcha.save_jpeg(file_o, quality);
  }
  else{
-	captcha.save(file_o);    
+  captcha.save(file_o);    
  }
 
   //std::printf("*********************\n");
