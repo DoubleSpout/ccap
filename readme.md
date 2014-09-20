@@ -1,99 +1,104 @@
+## Node-ccap [![Build Status](https://travis-ci.org/DoubleSpout/ccap.png?branch=master)](https://travis-ci.org/DoubleSpout/ccap)
 
-# node-ccap —— node.js generate captcha using c++ library CImg. [![Build Status](https://travis-ci.org/DoubleSpout/ccap.png?branch=master)](https://travis-ci.org/DoubleSpout/ccap)
+Node.js generate captcha using c++ library CImg. 
 
 You can generate captcha without install any other libraries or software, only do npm install ccap, that's all.
 
-node-ccap support linux, windows and mac.
+`node-ccap` support Linux, Windows and Mac.
 
-compile maybe cost you 1 minute,simply wait;
+compile maybe cost you 1 minute, simply wait.
 
-linux support jpeg,windows and mac only support bmp!
+Linux support jpeg, Windows and Mac only support bmp!
 
-*Please never using ccap in production on windows and mac, only with linux.*
+**Please never using ccap in production on Windows and Mac, only with Linux.**
 
-##performance
+### Performance
 
-  generate captcha picture 1204/sec;//BMP unzip
+Generate captcha picture `1204/Sec` (BMP unzip)
 
-##Install
+### Install
 
-   npm install ccap
-
-   var ccap = require('ccap')
-
-##Instantiated
-
-   these three ways all will be ok:
-
-	var captcha = ccap();
-	
-	var captcha = ccap(width, height, offset);
-
-	var captcha = ccap({
-		
-		width:256,//set width,default is 256
-
-		height:60,//set height,default is 60
-
-		offset:40,//set text spacing,default is 40
-
-		quality:100,//set pic quality,default is 50
-
-		fontsize:57,//set font size,default is 57
-
-		generate:function(){//Custom the function to generate captcha text
-		
-		     //generate captcha text here
-
-		     return text;//return the captcha text
-
-		}
-	
-	});
-	   
-
-##API
-   
-	var captcha = ccap();
-
-	var ary = captcha.get();//ary[0] is captcha's text,ary[1] is captcha picture buffer.
-
-	var text = ary[0];
-
-	var buffer = ary[1];
-
-
-##Simple Example
-	
-	var http = require('http');
-	
-	var ccap = require('ccap')();//Instantiated ccap class 
-
-	http.createServer(function (request, response) {
-
-		if(request.url == '/favicon.ico')return response.end('');//Intercept request favicon.ico
-
-		var ary = ccap.get();
-
-		var txt = ary[0];
-
-		var buf = ary[1];
-
-		response.end(buf);
-
-		console.log(txt);
-
-	}).listen(8124);
-
-	console.log('Server running at http://127.0.0.1:8124/');
-
-
-
-## 授权协议
-
-基于MIT协议发布：
-
+```bash
+$ npm install ccap
 ```
+
+### Getting Started
+
+these three ways all will be ok:
+
+#### Basic Useage:
+
+```js
+var captcha = ccap();
+```
+
+#### Advanced Useage:
+
+There are two ways to config a captcha instance:
+  
+```js
+var captcha = ccap(width, height, offset);
+```
+
+And:
+
+```js
+var captcha = ccap({
+  // Set width,default is 256
+  width:256,
+
+  // Set height,default is 60
+  height:60,
+
+  // Set text spacing,default is 40
+  offset:40,
+
+  // Set picture quality,default is 50
+  quality:100,
+
+  // set font size,default is 57
+  fontsize:57,
+
+  // Custom the function to generate captcha text
+  // Generate captcha text here:
+  generate:function(){
+    // Return the captcha text
+    return text;
+  }
+});
+``` 
+
+### API
+   
+```js
+var captcha = ccap();
+// ary[0] is captcha's text,ary[1] is captcha picture buffer.
+var ary = captcha.get();
+var text = ary[0];
+var buffer = ary[1];
+```
+
+### Examples
+
+```js
+var http = require('http');
+var ccap = require('ccap')(); // Instantiated ccap class 
+
+http.createServer(function (request, response) {
+  if(request.url == '/favicon.ico')return response.end('');//Intercept request favicon.ico
+  var ary = ccap.get();
+  var txt = ary[0];
+  var buf = ary[1];
+  response.end(buf);
+  console.log(txt);
+}).listen(8124);
+
+console.log('Server running at http://127.0.0.1:8124/');
+```
+
+
+### License
+
 Copyright (c) 2013 wu zhonghua <snoopyxdy@gmail.com>
 
 The MIT License
@@ -116,4 +121,3 @@ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
 LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-```

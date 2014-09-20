@@ -1,18 +1,19 @@
 #ifndef SV_H
 #define SV_H
 #include <node.h>
+#include <v8.h>
 #include <string>
 
-
+using namespace v8;
 
 class cap {
 
  public:
-  static v8::Handle<v8::Value> create(const v8::Arguments& args);
+  static void create(const FunctionCallbackInfo<Value>& args);
   static int save();
   
  protected:
-  static std::string toCString(v8::Handle<v8::Value> strp);
+  static std::string toCString(Handle<Value> strp);
 
  private:
   cap();
