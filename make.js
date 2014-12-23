@@ -16,13 +16,13 @@ if(os.platform() == 'win32'){
 
 
 	var bind_path = __dirname+path.sep+'binding.gyp';
-	try{
-		fs.chmodSync(bind_path, '0777');
-		var binding = fs.readFileSync(bind_path).toString();
-	}
-	catch(e){
-		throw('fail to read binding.gyp file, '+e)
-	}
+	// try{
+	// 	fs.chmodSync(bind_path, '0777');
+	// 	var binding = fs.readFileSync(bind_path).toString();
+	// }
+	// catch(e){
+	// 	throw('fail to read binding.gyp file, '+e)
+	// }
 	
 	binding = binding.replace(/\{\$__dirname\}/g,__dirname + '\\\\addon\\\\'+lib_name);
 	
