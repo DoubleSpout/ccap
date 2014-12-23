@@ -76,6 +76,7 @@ int cap::save(){
 
   // Write colored and distorted text
   CImg<unsigned char> captcha(width,height,1,3,0), color(3);
+  const unsigned char red[] = { 255,0,0 }, green[] = { 0,255,0 }, blue[] = { 0,0,255 };
 
   char letter[2] = { 0 };
   for (unsigned int k = 0; k<count; ++k) {
@@ -85,7 +86,8 @@ int cap::save(){
       cimg_forX(color,i) color[i] = (unsigned char)(128+(std::rand()%127));
       tmp.draw_text((int)(2+8*cimg::rand()),
                     (int)(12*cimg::rand()),
-                    letter,color.data(),
+                    letter,
+                    red,
                     0,
                     1,
                     fontSize).resize(-100,-100,1,3);
@@ -94,8 +96,8 @@ int cap::save(){
 //        const int val = dir==0?x+y:(dir==1?x+tmp.height()-y:(dir==2?y+tmp.width()-x:tmp.width()-x+tmp.height()-y));
 //        tmp(x,y,v) = (unsigned char)cimg::max(0.0f,cimg::min(255.0f,1.5f*tmp(x,y,v)*val/wph));
 //      }
-      if (std::rand()%2) tmp = (tmp.get_dilate(3)-=tmp);
-      tmp.blur((float)cimg::rand()*0.8f).normalize(0,255);
+      //if (std::rand()%2) tmp = (tmp.get_dilate(3)-=tmp);
+      //tmp.blur((float)cimg::rand()*0.8f).normalize(0,255);
       const float sin_offset = (float)cimg::crand()*3, sin_freq = (float)cimg::crand()/7;
       cimg_forYC(captcha,y,v) captcha.get_shared_row(y,0,v).shift((int)(4*std::cos(y*sin_freq+sin_offset)));
       captcha.draw_image(count+offset*k,tmp);

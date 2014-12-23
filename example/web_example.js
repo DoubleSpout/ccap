@@ -3,11 +3,11 @@ var http = require('http');
 //Instantiated ccap class
 
 var ccap = require('../')({
-	width:128,
-	height:40,
-	offset:20,
+	width:200,
+	height:50,
+	offset:30,
 	quality:100,
-  fontsize:30
+  fontsize:40
 });
 
 http.createServer(function (request, response) {
