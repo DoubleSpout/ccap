@@ -13,7 +13,7 @@
     "image",
     "CImg"
   ],
-  "version": "0.5.2",
+  "version": "0.6.0",
   "url": "https://github.com/DoubleSpout/ccap",
   "homepage": "https://github.com/DoubleSpout/ccap",
   "repository": {
@@ -22,7 +22,7 @@
   },
   "main": "index.js",
   "engines": {
-    "node": ">=0.8.5"
+    "node": ">=0.12.0"
   },
   "scripts": {
     "preinstall": "node make.js",
@@ -38,7 +38,8 @@
     "shasum": "1e7b80e2cb24d97f494f5b723b6793e50ae06e83"
   },
   "dependencies": {
-      "node-schedule":"0.1.13"
+      "node-schedule":"0.1.13",
+      "nan":"1.7.0"
   },
   "_resolved": "https://registry.npmjs.org/ccap/-/ccap-0.3.4.tgz"
 }

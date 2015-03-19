@@ -3,6 +3,8 @@
 
 You can generate captcha without install any other libraries or software, only do npm install ccap, that's all.
 
+**support node 0.12.x**
+
 node-ccap support linux, windows and mac.
 
 compile maybe cost you 1 minute,simply wait;
@@ -17,7 +19,9 @@ linux support jpeg,windows and mac only support bmp!
 
 ##Install
 
-   npm install ccap
+   npm install ccap 	  (new version, need node 0.12.x)
+
+   npm install ccap@0.5.3 (stop update, need node 0.8.x - 0.10.x)
 
    var ccap = require('ccap')
 
