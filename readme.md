@@ -91,7 +91,7 @@ linux support jpeg,windows and mac only support bmp!
 
 	console.log('Server running at http://127.0.0.1:8124/');
 
-#Stop create all cache
+#Stop and start timer cache
 
 	var ccap = require('ccap')();
 
@@ -100,6 +100,10 @@ linux support jpeg,windows and mac only support bmp!
 	ccap.clearTimeout(); //stop all create capature image, so will use the same the 20(default is 20) capature images
 
 	ccap.timerIsRunning();//now timer is stoped, return 0
+
+	captcha8.setTimeout();//now timer is start again
+
+	ccap.timerIsRunning();//now timer is stoped, return 1
 
 ## 授权协议
 

@@ -102,6 +102,8 @@ assert.equal(typeof captcha8.timerIsRunning,'function')
 assert.equal(captcha8.timerIsRunning(),1)
 assert.equal(captcha8.clearTimeout(), true)
 assert.equal(captcha8.timerIsRunning(),0)
+captcha8.setTimeout()
+assert.equal(captcha8.timerIsRunning(),1)
 
 console.log('ccap all test done!')
 
