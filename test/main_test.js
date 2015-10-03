@@ -94,7 +94,20 @@ var ary = captcha8.get();
 assert.equal(/\w/.test(ary[0]),true)
 assert.equal(Buffer.isBuffer(ary[1]), true)
 
+
+
+assert.equal(typeof captcha8.setTimeout,'function')
+assert.equal(typeof captcha8.clearTimeout,'function')
+assert.equal(typeof captcha8.timerIsRunning,'function')
+assert.equal(captcha8.timerIsRunning(),1)
+assert.equal(captcha8.clearTimeout(), true)
+assert.equal(captcha8.timerIsRunning(),0)
+
 console.log('ccap all test done!')
+
+
+
+
 
 process.exit(0)
 

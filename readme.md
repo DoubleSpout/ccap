@@ -19,7 +19,7 @@ linux support jpeg,windows and mac only support bmp!
 
 ##Install
 
-   npm install ccap 	  (new version, need node 0.12.x)
+   npm install ccap 	  (new version, need node 0.12.x and 4.x.x)
 
    npm install ccap@0.5.3 (stop update, need node 0.8.x - 0.10.x)
 
@@ -91,7 +91,15 @@ linux support jpeg,windows and mac only support bmp!
 
 	console.log('Server running at http://127.0.0.1:8124/');
 
+#Stop create all cache
 
+	var ccap = require('ccap')();
+
+	ccap.timerIsRunning(); //now timer is running, return 1
+
+	ccap.clearTimeout(); //stop all create capature image, so will use the same the 20(default is 20) capature images
+
+	ccap.timerIsRunning();//now timer is stoped, return 0
 
 ## 授权协议
 
