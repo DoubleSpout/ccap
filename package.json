@@ -13,7 +13,7 @@
     "image",
     "CImg"
   ],
-  "version": "0.6.0",
+  "version": "0.6.1",
   "url": "https://github.com/DoubleSpout/ccap",
   "homepage": "https://github.com/DoubleSpout/ccap",
   "repository": {
@@ -38,6 +38,7 @@
     "shasum": "1e7b80e2cb24d97f494f5b723b6793e50ae06e83"
   },
   "dependencies": {
+      "async":"1.4.2",
       "node-schedule":"0.1.13",
       "nan":"1.7.0"
   },
