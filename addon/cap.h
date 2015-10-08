@@ -12,7 +12,7 @@ class cap {
   static int save();
   
  protected:
-  static std::string toCString(Handle<Value> strp);
+  static std::string toCString(Local<Value> strp);
 
  private:
   cap();

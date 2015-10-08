@@ -3,7 +3,7 @@
 
 using namespace v8;
 
-void Init(Handle<Object> target) {
+void Init(Local<Object> target) {
 
 //hcap
   NODE_SET_METHOD(target, "create", cap::create);
