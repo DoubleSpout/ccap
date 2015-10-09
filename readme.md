@@ -25,7 +25,7 @@ linux support jpeg,windows and mac only support bmp!
 
    var ccap = require('ccap')
 
-   if you don`t want to update gcc version, ccap package Compiled file is in folder `release`, just download it and copy it to your `node_modules`. 
+   if you don't want to update gcc version, ccap package Compiled file is in folder `release`, just download it and copy it to your `node_modules`. 
 
 ##Instantiated
 
