@@ -37,7 +37,10 @@
                                "addon/jpeglib/jmemnobs.c",
                                "addon/hcaptha.cc" ,"addon/cap.cc"],
                                "libraries": [],
-                               "cflags_cc": ["-fexceptions","-Dcimg_display=0","-Dcimg_use_jpeg","-L/usr/X11R6/lib","-lm","-lpthread","-lX11"]
+                               "cflags_cc": ["-fexceptions","-Dcimg_display=0","-Dcimg_use_jpeg","-L/usr/X11R6/lib","-lm","-lpthread","-lX11"],
+                               "CMAKE_CC":["gcc-4.8"],
+                               "CMAKE_CXX":["g++-4.8"],
+                               "CMAKE_ARGS":["-DCMAKE_BUILD_TYPE=Release","-DUSE_OPENMP=ON","-DNO_CXX11=ON"]
             }],
             ["OS==\"win\"", {
                                "sources": ["addon/hcaptha.cc" ,"addon/cap.cc"],
