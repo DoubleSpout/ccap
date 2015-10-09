@@ -145,7 +145,7 @@ int cap::save(){
 }
 
 
-std::string cap::toCString(Handle<Value> strp){
+std::string cap::toCString(Local<Value> strp){
       String::Utf8Value utf8_value(strp->ToString());//转化成v8::Utf8Value
       std::string str = *utf8_value;//转化为string
       return str;
