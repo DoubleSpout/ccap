@@ -1,0 +1,51 @@
+{
+  "author": {
+    "name": "doublespout",
+    "email": "snoopyxdy@163.com",
+    "url": "http://snoopyxdy.blog.163.com"
+  },
+  "name": "ccap",
+  "description": "node.js generate captcha using c++ library CImg without install any other lib or software",
+  "keywords": [
+    "node",
+    "captcha",
+    "c++",
+    "image",
+    "CImg"
+  ],
+  "version": "0.6.4",
+  "url": "https://github.com/DoubleSpout/ccap",
+  "homepage": "https://github.com/DoubleSpout/ccap",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DoubleSpout/ccap.git"
+  },
+  "main": "index.js",
+  "engines": {
+    "node": ">=0.12.0"
+  },
+  "scripts": {
+    "preinstall": "node make.js",
+    "install": "node-gyp rebuild",
+    "test": "node ./test/main_test.js"
+  },
+  "gypfile": true,
+  "readme": "\r\n\r\n# node-ccap —— node.js generate captcha using c++ library CImg.\r\n\r\nYou can generate captcha without install any other libraries or software, only do npm install ccap, that's all.\r\n\r\nnode-ccap support linux and windows.\r\n\r\ncompile maybe cost you 1 minute,simply wait;\r\n\r\n##performance\r\n\r\n  generate captcha picture 697/sec;\r\n\r\n##Install\r\n\r\n   npm install ccap\r\n\r\n   var ccap = require('ccap')\r\n\r\n##Instantiated\r\n\r\n   these three ways all will be ok:\r\n\r\n\tvar captcha = ccap();\r\n\t\r\n\tvar captcha = ccap(width, height, offset);\r\n\r\n\tvar captcha = ccap({\r\n\t\t\r\n\t\twidth:256,//set width,default is 256\r\n\r\n\t\theight:60,//set height,default is 60\r\n\r\n\t\toffset:40,//set text spacing,default is 40\r\n\r\n\t\tquality:100,//set pic quality,default is 50\r\n\r\n\t\tgenerate:function(){//Custom the function to generate captcha text\r\n\t\t\r\n\t\t     //generate captcha text here\r\n\r\n\t\t     return text;//return the captcha text\r\n\r\n\t\t}\r\n\t\r\n\t});\r\n\t   \r\n\r\n##API\r\n   \r\n\tvar captcha = ccap();\r\n\r\n\tvar ary = captcha.get();//ary[0] is captcha's text,ary[1] is captcha picture buffer.\r\n\r\n\tvar text = ary[0];\r\n\r\n\tvar buffer = ary[1];\r\n\r\n\r\n##Simple Example\r\n\t\r\n\tvar http = require('http');\r\n\t\r\n\tvar ccap = require('../')();//Instantiated ccap class\r\n\r\n\thttp.createServer(function (request, response) {\r\n\r\n\t\tif(request.url == '/favicon.ico')return response.end('');//Intercept request favicon.ico\r\n\r\n\t\tvar ary = ccap.get();\r\n\r\n\t\tvar txt = ary[0];\r\n\r\n\t\tvar buf = ary[1];\r\n\r\n\t\tresponse.end(buf);\r\n\r\n\t\tconsole.log(txt);\r\n\r\n\t}).listen(8124);\r\n\r\n\tconsole.log('Server running at http://127.0.0.1:8124/');\r\n\r\n\r\n\r\n## 授权协议\r\n\r\n基于MIT协议发布：\r\n\r\n```\r\nCopyright (c) 2012 wu zhonghua(吴中骅) <snoopyxdy@gmail.com>\r\n\r\nThe MIT License\r\n\r\nPermission is hereby granted, free of charge, to any person obtaining\r\na copy of this software and associated documentation files (the\r\n\"Software\"), to deal in the Software without restriction, including\r\nwithout limitation the rights to use, copy, modify, merge, publish,\r\ndistribute, sublicense, and/or sell copies of the Software, and to\r\npermit persons to whom the Software is furnished to do so, subject to\r\nthe following conditions:\r\n\r\nThe above copyright notice and this permission notice shall be\r\nincluded in all copies or substantial portions of the Software.\r\n\r\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\r\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\r\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\r\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\r\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\r\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\r\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\r\n```",
+  "readmeFilename": "readme.md",
+  "_id": "ccap@0.6.4",
+  "_from": "ccap@*",
+  "dist": {
+    "shasum": "1e7b80e2cb24d97f494f5b723b6793e50ae06e83"
+  },
+  "dependencies": {
+    "async": "1.4.2",
+    "node-schedule": "0.1.13",
+    "nan": "1.7.0"
+  },
+  "_resolved": "https://registry.npmjs.org/ccap/-/ccap-0.3.4.tgz",
+  "gitHead": "1654f91348a0b1f5862a2d60dd9aa22ead3f4dfb",
+  "bugs": {
+    "url": "https://github.com/DoubleSpout/ccap/issues"
+  },
+  "_shasum": "ee2f51f5aefac3b2cf285c4a0555beeb020bc621"
+}
