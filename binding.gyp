@@ -9,8 +9,8 @@
                                "libraries": [],
                                "cflags_cc": ["-fexceptions","-Dcimg_display=0"],
                                'xcode_settings': {
-						            'GCC_ENABLE_CPP_EXCEPTIONS': 'YES'
-						          }
+                        'GCC_ENABLE_CPP_EXCEPTIONS': 'YES'
+                      }
             }],
             ["OS==\"linux\"", {
                                "sources": ["addon/jpeglib/jaricom.c", "addon/jpeglib/jcapimin.c", "addon/jpeglib/jcapistd.c", 
