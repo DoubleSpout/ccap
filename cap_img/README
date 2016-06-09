@@ -1,0 +1,3 @@
+The sub dirs under this directory are used for saving cache images.
+- Dir '0' is only used in non cluster mode.
+- Dir '1','2'..'n' are used for each worker in cluster mode, the directory name map to the worker id.
