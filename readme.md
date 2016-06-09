@@ -19,7 +19,7 @@ linux support jpeg,windows and mac only support bmp!
 
 ##Install
 
-   npm install ccap 	  (new version, need node 0.12.x and 4.x.x, on linux need gcc v4.8+)
+   npm install ccap 	  (new version, need node 0.12.x and 4.x.x and 6.x.x, on linux need gcc v4.8+)
 
    npm install ccap@0.5.3 (stop update, need node 0.8.x - 0.10.x)
 
