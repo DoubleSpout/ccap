@@ -115,9 +115,8 @@ linux support jpeg,windows and mac only support bmp!
 
 	ccap.timerIsRunning();//now timer is stoped, return 1
 
-## 授权协议
+## MIT LINCENCE
 
-基于MIT协议发布：
 
 ```
 Copyright (c) 2013 wu zhonghua <snoopyxdy@gmail.com>
