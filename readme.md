@@ -27,7 +27,7 @@ linux support jpeg,windows and mac only support bmp!
 
    if you don't want to update gcc version, ccap package Compiled file is in folder `release`, just download it and copy it to your `node_modules`. 
    
-   if you are chinese, please use `cnpm` to install ccap like this
+   if you are in China (and behind the GWF), please use `cnpm` to install ccap like this
    
    1.npm install cnpm -g --registry=https://registry.npm.taobao.org
    
