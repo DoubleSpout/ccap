@@ -13,11 +13,11 @@ linux support jpeg,windows and mac only support bmp!
 
 *Please never using ccap in production on windows and mac, only with linux.*
 
-##performance
+## performance
 
   generate captcha picture 1204/sec;//BMP unzip
 
-##Install
+## Install
 
    npm install ccap 	  (new version, need node 0.12.x and 4.x.x and 6.x.x, on linux need gcc v4.8+)
 
@@ -35,7 +35,7 @@ linux support jpeg,windows and mac only support bmp!
    
    2.cnpm install ccap
 
-##Instantiated
+## Instantiated
 
    these three ways all will be ok:
 
@@ -66,7 +66,7 @@ linux support jpeg,windows and mac only support bmp!
 	});
 	   
 
-##API
+## API
    
 	var captcha = ccap();
 
@@ -77,7 +77,7 @@ linux support jpeg,windows and mac only support bmp!
 	var buffer = ary[1];
 
 
-##Simple Example
+## Simple Example
 	
 	var http = require('http');
 	
@@ -101,7 +101,7 @@ linux support jpeg,windows and mac only support bmp!
 
 	console.log('Server running at http://127.0.0.1:8124/');
 
-#Stop and start timer cache
+# Stop and start timer cache
 
 	var ccap = require('ccap')();
 
