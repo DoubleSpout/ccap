@@ -7,7 +7,10 @@ var ccap = require('../')({
 	height:50,
 	offset:30,
 	quality:100,
-  fontsize:40
+  fontsize:40,
+  text_len: 4, // 长度
+  str_ary: ['1','2','3','4','5','6','7','9','A','C','D','E','F','G','H',
+	'I','J','K','L','M','N','R','S','T','U','W','X','Y','Z'], // 自定义字符组，去掉一些容易搞错的字符如0 O 8 B等
 });
 
 http.createServer(function (request, response) {
