@@ -3,12 +3,11 @@
 
 using namespace v8;
 
-void Init(Local<Object> target) {
+void Init(Local <Object> target) {
 
 //hcap
-  NODE_SET_METHOD(target, "create", cap::create);
-
-
+    NODE_SET_METHOD(target, "create", cap::create);
 }
 
-NODE_MODULE(hcaptha, Init)
+NODE_MODULE(hcaptha, Init
+)

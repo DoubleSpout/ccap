@@ -2,6 +2,9 @@
   "targets":[
     {
       "target_name": "hcaptha",
+      "include_dirs":[
+        "<!(node -e \"require('nan')\")"
+      ],
       "conditions": [
             ["OS==\"mac\"", {   
                        "sources": [
