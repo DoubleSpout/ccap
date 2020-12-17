@@ -43329,7 +43329,7 @@ namespace cimg_library_suffixed {
     //! Return a list where each image has been split along the specified axis.
     /**
         \param axis Axis to split images along.
-        \param nb Number of spliting parts for each image.
+        \param nb Number of splitting parts for each image.
     **/
     CImgList<T>& split(const char axis, const int nb=0) {
       return get_split(axis,nb).move_to(*this);
