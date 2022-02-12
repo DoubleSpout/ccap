@@ -29,7 +29,7 @@ linux support jpeg,windows and mac only support bmp!
    
    if you are in China (and behind the GWF), please use `cnpm` to install ccap like this
    
-   1.npm install cnpm -g --registry=https://registry.npm.taobao.org
+   1.npm install cnpm -g --registry=https://registry.npmmirror.com
    
    2.cnpm install node-gyp -g
    
